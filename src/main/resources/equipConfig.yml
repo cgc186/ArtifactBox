@@ -1,39 +1,39 @@
 EquipmentPage:
-  Page1:
-    Setting:
-      name: '该装备页名称'
-      condition:
-        jurisdiction: '' #权限,装备页权限高于槽位权限
-        takeEffect: false #是否生效
-      suitEffect: #套装效果
-        status: false #是否生效
-        location: '1,2,3,4'
-        effect: #不同数量套装生效的效果
-          effect1:
-            value: 2
-            attribute: ''
-    Slot: #槽位
-      Slot1:
-        position: 1
-        condition: #权限 等级 金币 点券 lore
-          status: false
-          type: '权限'
-          value: 0
-          lore: '没权限,装备无法放入'
-        preRestriction: #前置条件
-          frontLock: #前置解锁限制
-            status: false
-            value: 0
-            lore: '你必须先解锁xx槽位,才能使用当前槽位!'
-          frontEquipment: #前置安装限制
-            status: false
-            value: 0
-            lore: '你需要在xx槽位放入装备,才能使用当前槽位!'
-        item:
-          type: '头盔'
-          data:
-            id: 0
-            lore: ''
-          lore: '类型: 头盔'
+    Page1:
+        Setting:
+            name: '该装备页名称'
+            condition:
+                jurisdiction: '' #权限,装备页权限高于槽位权限
+                takeEffect: false #是否生效
+            suitEffect: #套装效果
+                status: false #是否生效
+                location: '1,2,3,4'
+                effect: #不同数量套装生效的效果
+                    effect1:
+                        value: 2
+                        attribute: ''
+        Slot: #槽位
+            Slot1:
+                position: 1
+                condition: #权限 等级 金币 点券 lore
+                    status: false
+                    type: '权限'
+                    value: 0
+                    lore: '没权限,装备无法放入'
+                preRestriction: #前置条件
+                    frontLock: #前置解锁限制
+                        status: false
+                        value: 0
+                        lore: '你必须先解锁xx槽位,才能使用当前槽位!'
+                    frontEquipment: #前置安装限制
+                        status: false
+                        value: 0
+                        lore: '你需要在xx槽位放入装备,才能使用当前槽位!'
+                item:
+                    type: '头盔'
+                    data:
+                        id: 0
+                        lore: ''
+                    lore: '类型: 头盔'
 
 
