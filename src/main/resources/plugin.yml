@@ -1,7 +1,7 @@
 name: ArtifactBox
 version: ${project.version}
 main: cgc.artifactbox.ArtifactBox
-api-version: 1.16
+depend: [BrAPI]
 
 commands:
   sxpage:
