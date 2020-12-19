@@ -1,0 +1,17 @@
+Decorate:
+  Setting:
+    name: '该装饰页名称'
+  Slot: #槽位
+    Slot1:
+      position: 1
+      item:
+        type: '头盔'
+        default:
+          data:
+            id: 0
+            lore: ''
+        equip:
+          data:
+            id: 0
+            lore: ''
+        lore: '类型: 头盔'
