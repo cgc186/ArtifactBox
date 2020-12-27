@@ -104,7 +104,7 @@ class Slot(config: ConfigurationSection) : DisplaySlot(config) {
     val level = config.getInt("setting.unlock.level", -1)
     val point = config.getInt("setting.unlock.point", -1)
     val permission = config.getString("setting.unlock.permission") ?: null
-    val lore = config.getStringList("setting.lock").map {
+    val lore = config.getStringList("lore").map {
         ChatColor.translateAlternateColorCodes('&', it)
     }
     val depend = config.getIntegerList("setting.unlock.depend")
