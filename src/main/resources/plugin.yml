@@ -1,13 +1,11 @@
 name: ArtifactBox
 version: ${project.version}
 main: cgc.artifactbox.ArtifactBox
-depend: [BrAPI]
+depend: [ BrAPI, PlayerPoints ]
 
 commands:
-  sxpage:
-    usage: |
-      §6/<command> open 装备页名 玩家名>> 查看玩家装备页 op打开自己的装备页 不用输玩家名)
-      §6/<command> reload >> 重载插件
-      §6/<command> open 装备页名 >> 查看装备页权限
-      §6/<command> 装备页名 use >> 使用装备页权限
-      §6/<command> 装备页名 槽位ID >> 装备页槽位权限
+    sxpage:
+        aliases: [ ab ]
+        usage: |
+            §6/<command> open [装备页名] >> 查看玩家装备页
+            §6/<command> reload >> 重载插件

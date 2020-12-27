@@ -1,0 +1,70 @@
+#一个文件定义一个装备页
+Setting:
+    #用于命令的 装备页名字
+    name: 'example'
+    #ui标题 描述支持papi
+    title: '&6范例装备页'
+    #ui行数 最大6最小1
+    size: 1
+Page:
+    #物品位置 请参考我发的图片
+    '0':
+        #ui物品类型 可填入SLOT或者DECORATION
+        type: 'DECORATION'
+        #显示的物品, 如果是DECORATION则直接显示,如果是SLOT则为空物品的时候显示, 支持papi
+        display:
+            id: 160
+            durability: 3
+            name: "&a装饰"
+            lore:
+                - '&b装饰lore'
+        #点击执行的命令
+        #p: 玩家执行
+        #op: 玩家以op权限执行
+        #cmd: 后台执行
+        command:
+            - 'p:sxpage open xxx'
+    '1':
+        type: 'SLOT'
+        display:
+            id: 160
+            durability: 0
+            #光效
+            enchEffect: true
+            name: '&a可放入戒指'
+            lore:
+                - '&a已解锁'
+        #如果没有权限或者没有解锁时显示的内容
+        lock:
+            id: 166
+            name: '&a未解锁: 戒指槽'
+            lore:
+                - '&b需要10级'
+                - '&6需要1000金币'
+        setting:
+            #解锁要求里的东西都可以删除
+            unlock:
+                #解锁费用
+                money: 1000
+                #等级不会扣除 只是监测
+                level: 10
+                #点卷
+                point: 0
+                #要的权限
+                permission: 'vip.1'
+                #依赖某个其他的槽位有东西才能放入 填数字
+                #depend: [3]
+            #需要含有什么lore才能放入
+            #写入的满足任何一个就可以
+            lore: [ '&6部位: 戒指','&a可放入: 戒指槽' ]
+        
+#套装设定 不要的话可以删除
+Suit:
+    #随便填写
+    example:
+        #要包含哪个lore才能算作本套装
+        lore: '&6套装: 范例'
+        effect:
+            #两件时额外追加的lore 直接传递给属性插件的
+            '2':
+                - '攻击力: +10'
